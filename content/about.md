@@ -2,7 +2,7 @@
 title: About
 date: 2019-07-09
 menu: main
-draft: true
+draft: false
 ---
 Welcome to Rudefish Infosec. Iyanuoluwa Ogundipe is a Cyber Security Enthusiast, team member at Diary of Hackers, active CTF player and learning penetration tester.
 
