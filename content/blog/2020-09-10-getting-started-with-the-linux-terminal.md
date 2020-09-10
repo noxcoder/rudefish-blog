@@ -5,7 +5,7 @@ image: /images/bash-161382_960_720.png
 tags:
   - Linux
   - Terminal
-draft: false
+draft: true
 ---
 *So you just installed Linux and you need to get comfortable with the terminal right? Here's the right place to get you started.*
 
