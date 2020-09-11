@@ -1,5 +1,5 @@
 baseline: Cyber security
-theme: hyde
+theme: garth
 output:
   formats:
     - name: netlify_redirects
