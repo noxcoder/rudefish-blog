@@ -7,7 +7,7 @@ tags:
   - Networking
   - Beginner
   - Tools
-draft: true
+draft: false
 ---
 There are various network tools which can be used for obtaining network information about your system and remote systems likewise. At [Diary of Hackers](https://diaryofhackers.com) we had a five day beginners training on networking tools in Linux. Recording for each day can be found below:
 
