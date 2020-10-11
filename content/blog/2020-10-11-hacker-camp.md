@@ -14,19 +14,17 @@ draft: false
 
 **Description**
 
-By following the provided link `https://hacker-camp.chals.damctf.xyz/ `we are presented with a login page
+By following the provided link `https://hacker-camp.chals.damctf.xyz/`we are presented with a login page
 
 ![](/images/home-page.png "OSUSEC Login Page")
 
-So we have a PHP application requesting for a username and password. We did some directory brute forcing with gobuster but didn't get much result, so we proceeded to bypass the login page using SQLi. Providing `' or 1=1#` as the username and any password, we are logged in as the user `rhodes.daniels`
+So we have a PHP application requesting for a username and password. We did some directory brute forcing with gobuster but didn't get much result, so we proceeded to bypass the login page using SQLi. Providing `' or 1=1#` as the username and any password, we are logged in as the user `rhonda.daniels`
 
 ![](/images/sqli.png "Login page bypass")
 
 ![](/images/rhodes.png "Logged in as rhodes.daniels")
 
-
-
-Then we have a list of students, looks like `rhodes.daniels` is a staff
+Then we have a list of students, looks like `rhonda.daniels` is a staff
 
 ![](/images/students.png "List of students")
 
