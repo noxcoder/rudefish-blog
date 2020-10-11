@@ -6,7 +6,7 @@ tags:
   - CTF
   - Git
   - Log
-draft: true
+draft: false
 ---
 Points: 700
 
