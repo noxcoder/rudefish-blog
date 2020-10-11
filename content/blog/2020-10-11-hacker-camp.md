@@ -79,7 +79,7 @@ The next line of action would be to make our user an admin or find a way to perf
 )(staff, 'student');
 ```
 
-Following the code, after it checks if the user is an admin it obtains the student record with the "student-link" class and then extract the id which is the base64 encoding of the format lastname_firstname we saw earlier and the location is at '`/update-' + objectname + '/' + this.dataset.id`. We can obtain the id for each student, then the objectname is 'student' by looking that the app.min.js, it's now time to see if we can update a student's record. By picking the first student on the table `Brett, Nancie` with id `TmFuY2llX0JyZXR0` with when decoded translates to `Nancie_Brett`, we can construct our url to be `https://hacker-camp.chals.damctf.xyz/update-student/TmFuY2llX0JyZXR0`
+Following the code, after it checks if the user is an admin it obtains the student record with the "student-link" class and then extract the id which is the base64 encoding of the format lastname_firstname we saw earlier and the location is at '`/update-' + objectname + '/' + this.dataset.id`. We can obtain the id for each student, then the objectname is 'student' by looking that the app.min.js, it's now time to see if we can update a student's record. By picking the first student on the table `Brett, Nancie` with id `TmFuY2llX0JyZXR0` which when decoded translates to `Nancie_Brett`, we can construct our url to be `https://hacker-camp.chals.damctf.xyz/update-student/TmFuY2llX0JyZXR0`
 
 ![](/images/brett.png "Brett, Nancie")
 
