@@ -6,7 +6,7 @@ tags:
   - DamCTF
   - Web
   - HackerCamp
-draft: true
+draft: false
 ---
 **Challenge**
 
