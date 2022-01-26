@@ -10,7 +10,7 @@ tags:
   - chisel
   - StrapiCMS
   - laravel
-draft: true
+draft: false
 ---
 **Machine Details**
 
